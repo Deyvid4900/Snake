@@ -1,0 +1,220 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    background-image: url(/Snake/imagens/900330-poa-grama-1000x1000-61f87341a3113.webp);
+    background-size: 300px;
+    background-repeat: repeat;
+}
+
+
+/* Tela inicial do jogo */
+.container {
+    background-color: white;
+    height: 80vh;
+    width: 40vw;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px auto;
+    border-radius: 10px;
+    border: 5px solid rgba(101, 101, 101, 0.505);
+}
+
+.container div {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.container button {
+    padding: 10px 20px;
+    border: 3px solid #dcdcdc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#b1 {
+    background-color: lightgreen;
+    transition: 0.5s;
+    border: 3px solid rgb(80, 125, 80);
+}
+
+#b2 {
+    background-color: rgb(245, 245, 131);
+    transition: 0.5s;
+    border: 3px solid rgb(129, 129, 69) ;
+}
+
+#b3 {
+    background-color: lightcoral;
+    transition: 0.5s;
+    border: 3px solid rgb(147, 79, 79);
+}
+
+#b1:hover {
+    background-color: transparent;
+}
+
+#b2:hover {
+    background-color: transparent;
+}
+
+#b3:hover {
+    background-color: transparent;
+}
+
+#btnJogar {
+    margin-top: 40px;
+    padding: 20px 40px;
+    font-size: 24pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+#btnJogar:hover {
+    background-color: transparent;
+}
+#menu{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+    margin-right: 30px;
+}
+#opcao,#som{
+    margin-top: -60px;
+    margin-bottom: 30px;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    color: black !important;
+}
+
+/* Header de pontos e tempo */
+header {
+
+    background-color: rgba(255, 255, 255, 0.344);
+
+    width: 100%;
+    height: 80px;
+
+
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.189);
+
+
+    align-items: center;
+    justify-content: space-around;
+    display: none;
+}
+
+span {
+    color: rgb(38, 109, 38);
+}
+
+#logo {
+    justify-self: start;
+}
+h1{
+    font-size: 40px;
+}
+
+h1>p {
+    text-align: center;
+    
+}
+#btn_remover{
+    color: red;
+    cursor: pointer;
+}
+
+
+
+/* Area do jogo */
+#AreaDeJogo {
+
+    margin: auto;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    display: none;
+
+    
+    justify-content: start;
+    align-items: flex-end;
+    
+}
+#AreaDeAtuacao{
+    width: 1000px;
+    height: 500px;
+    
+    background-color: #dcdcdc5b;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(0, 0, 0, 0.394);
+    
+}
+
+/* Personagem */
+
+#Personagem {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: rgb(35, 171, 35);
+    position: relative ;
+    
+}
+
+/* Movimentos*/
+.btnMove {
+    width: 70px;
+    height: 70px;
+    background-color: #dcdcdc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.316);
+
+}
+
+.btnMove:hover {
+    background-color: #dcdcdc74;
+}
+
+#aside {
+    display: none;
+    padding: 10px;
+    gap: 5px;
+}
+
+
+
+/* Para JavaScript */
+.ObjPonto {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.Apagado {
+    display: none !important;
+}
+
+.Acesso {
+    display: flex !important;
+}
+.bola{
+    position: static !important;
+}
